@@ -1,0 +1,28 @@
+{
+  "register": {
+        "fullName": "Full Name* ",
+        "email": "Email* ",
+        "country": "Country* ",
+        "phoneNumber": "Phone Number* ",
+        "restroName": "Restaurant Name*",
+        "seats": "Number of seats*",
+        "date": "Date & Time*",
+        "submit": "Submit",
+        "FULL_NAME_REQUIRED": "First name is required.",
+        "FULL_NAME_PATTERN": "First name must be alphbatic.",
+        "FULL_NAME_MINLENGTH": "The first name should be greater than 5 characters.",
+        "EMAIL_REQUIRED": "Last name is required.",
+        "EMAIL_PATTERN": "Last name must be alphbatic .",
+        "EMAIL_MINLENGTH": "The Last name should be greater than 5 characters.",
+        "RESTRO_NAME_REQUIRED": "First name is required.",
+        "RESTRO_NAME_PATTERN": "First name must be alphbatic.",
+        "RESTRO_NAME_MINLENGTH": "The first name should be greater than 5 characters.",
+        "COUNTRY_REQUIRED": "Country is required.",
+        "PHONE_NO_REQUIRED": "Phone Number is required.",
+        "SEATS_PATTERN": "10 digits, with no spaces or special characters.",
+        "SEATS_REQUIRED": "Phone Number is required.",
+        "DATE_PATTERN": "10 digits, with no spaces or special characters.",
+        "DATE_REQUIRED": "Phone Number is required.",
+
+    }
+}
