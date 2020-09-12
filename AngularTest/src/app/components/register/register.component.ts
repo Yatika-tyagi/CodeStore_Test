@@ -39,14 +39,13 @@ export class RegisterComponent implements OnInit {
    */
   buildForm(): void { // reactive form
     this.signUp = this.formBuilder.group({
-      'fullName': [this.userSignUp.fullName, [Validators.required, Validators.pattern('[a-zA-Z ]*'), Validators.minLength(50)]],
-      'email': [this.userSignUp.email, [Validators.required, Validators.pattern('/\S+@\S+\.\S+/'), Validators.minLength(50)]],
-      'phoneNumber': [this.userSignUp.phoneNumber, [Validators.required, Validators.pattern('[0-9]{10}')]],
-      'restroName': [this.userSignUp.restroName, [Validators.required, Validators.pattern('[a-zA-Z ]*'), Validators.minLength(50)]],
-      'seats': [this.userSignUp.seats, [Validators.required, Validators.minLength(5)]],
-      'date': [this.userSignUp.date, [Validators.required, Validators.minLength(50)]],
-      'country': [this.userSignUp.country,
-        [Validators.required]
+      'fullName': [this.userSignUp.fullName],
+      'email': [this.userSignUp.email],
+      'phoneNumber': [this.userSignUp.phoneNumber],
+      'restroName': [this.userSignUp.restroName],
+      'seats': [this.userSignUp.seats],
+      'date': [this.userSignUp.date],
+      'country': [this.userSignUp.country
       ]
     });
   }
@@ -55,9 +54,10 @@ export class RegisterComponent implements OnInit {
    * @desc used to submit signup form details and navigate to home page.
    */
   submitSignUp(): void {
-    this.userSignUp = this.signUp.value;
-    localStorage.setItem('userName', `${this.userSignUp.fullName}` );
-    this.router.navigate(['/home']);
+      this.userSignUp = this.signUp.value;
+      // tslint:disable-next-line:max-line-length
+      localStorage.setItem('userName', `${this.userSignUp.fullName}` );
+      this.router.navigate(['/home']);
   }
 
 }

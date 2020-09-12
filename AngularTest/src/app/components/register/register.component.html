@@ -1,102 +1,61 @@
  <div>
+   <h1>Restaurant Management System</h1>
    <br>
   <!-- Form Start -->
   <form [formGroup]="signUp" (ngSubmit)="submitSignUp()">
     <div>
       <!-- Full Name Start-->
       <div class="form-group">
-        <label for="fullName" [class.input-focus]="signUp.get('fullName').value.length">{{ 'register.fullName' | translate }}</label>
-        <input class="form-control" #fullName formControlName="fullName" name="fullName" type="text" value="" maxlength="128"/>
-      </div>
-      <div *ngIf="signUp.controls['fullName'].errors && !signUp.controls['FullName'].pristine" class="error-msgr">
-        <div [ngSwitch]="obj(signUp.controls['fullName'].errors)[0]">
-          <div *ngSwitchCase="'required'">{{ 'register.FULL_NAME_REQUIRED' | translate  }}</div>
-          <div *ngSwitchCase="'minlength'">{{ 'register.FULL_NAME_MINLENGTH' | translate  }}</div>
-          <div *ngSwitchCase="'pattern'">{{ 'register.FULL_NAME_PATTERN' | translate  }}</div>
-        </div>
+        <label for="fullName">FullName*: </label>
+        <input class="form-control" #fullName formControlName="fullName" name="fullName" type="text" value="" maxlength="128" />
       </div>
       <!-- Full Name End -->
+
       <!-- Email Start-->
       <div class="form-group">
-        <label for="email" [class.input-focus]="signUp.get('email').value.length">{{ 'register.email' | translate }}</label>
-        <input class="form-control" #email formControlName="email" name="email" type="text" value="" maxlength="128"/>
-      </div>
-      <div *ngIf="signUp.controls['email'].errors && !signUp.controls['email'].pristine" class="error-msgr">
-        <div [ngSwitch]="obj(signUp.controls['email'].errors)[0]">
-          <div *ngSwitchCase="'required'">{{ 'register.EMAIL_REQUIRED' | translate  }}</div>
-          <div *ngSwitchCase="'minlength'">{{ 'register.EMAIL_MINLENGTH' | translate  }}</div>
-          <div *ngSwitchCase="'pattern'">{{ 'register.EMAIL_PATTERN' | translate  }}</div>
-        </div>
+        <label for="email">Email*: </label>
+        <input class="form-control" #email formControlName="email" name="email" type="text" value="" maxlength="128" />
       </div>
       <!-- Email End -->
+
       <!-- Phome Number Start-->
       <div class="form-group">
-        <label for="phoneNumber" [class.input-focus]="signUp.get('phoneNumber').value.length">{{ 'register.phoneNumber' | translate }}</label>
+        <label for="phoneNumber">Mobile*: </label>
         <input class="form-control" #phoneNumber type="text" formControlName="phoneNumber" name="phoneNumber" maxlength="10 " />
-      </div>
-      <div *ngIf="signUp.controls['phoneNumber'].errors && !signUp.controls['phoneNumber'].pristine" class="error-msgr">
-        <div [ngSwitch]="obj(signUp.controls['phoneNumber'].errors)[0]">
-          <div *ngSwitchCase="'required'">{{ 'register.PHONE_NO_REQUIRED' | translate  }}</div>
-          <div *ngSwitchCase="'pattern'">{{ 'register.PHONE_NO_PATTERN' | translate  }}</div>
-        </div>
       </div>
       <!-- Phome Number End -->
 
     <!-- Restraunt Name Start-->
     <div class="form-group">
-      <label for="restroName" [class.input-focus]="signUp.get('restroName').value.length">{{ 'register.restroName' | translate }}</label>
-      <input class="form-control" #restroName formControlName="restroName" name="restroName" type="text" value="" maxlength="128"/>
-    </div>
-    <div *ngIf="signUp.controls['restroName'].errors && !signUp.controls['restroName'].pristine" class="error-msgr">
-      <div [ngSwitch]="obj(signUp.controls['restroName'].errors)[0]">
-        <div *ngSwitchCase="'required'">{{ 'register.RESTRO_NAME_REQUIRED' | translate  }}</div>
-        <div *ngSwitchCase="'minlength'">{{ 'register.RESTRO_NAME_MINLENGTH' | translate  }}</div>
-        <div *ngSwitchCase="'pattern'">{{ 'register.RESTRO_NAME_PATTERN' | translate  }}</div>
-      </div>
+      <label for="restroName">Restaurant Name*: </label>
+      <input class="form-control" #restroName formControlName="restroName" name="restroName" type="text" value="" maxlength="128" />
     </div>
     <!-- Restraunt Name End -->
 
      <!-- Number Of Seats Start-->
      <div class="form-group">
-      <label for="seats" [class.input-focus]="signUp.get('seats').value.length">{{ 'register.seats' | translate }}</label>
-      <input class="form-control" #seats formControlName="seats" name="seats" type="text" value="" maxlength="128"/>
-    </div>
-    <div *ngIf="signUp.controls['seats'].errors && !signUp.controls['seats'].pristine" class="error-msgr">
-      <div [ngSwitch]="obj(signUp.controls['seats'].errors)[0]">
-        <div *ngSwitchCase="'required'">{{ 'register.SEATS_REQUIRED' | translate  }}</div>
-        <div *ngSwitchCase="'minlength'">{{ 'register.SEATS_MINLENGTH' | translate  }}</div>
-      </div>
+      <label for="seats">Number Of Seats*: </label>
+      <input class="form-control" #seats formControlName="seats" name="seats" type="text" value="" maxlength="128" />
     </div>
     <!-- Number Of Seats End -->
 
      <!-- Date and Time Start-->
      <div class="form-group">
-      <label for="date" [class.input-focus]="signUp.get('date').value.length">{{ 'register.date' | translate }}</label>
-      <input class="form-control" #date formControlName="date" name="date" type="text" value="" maxlength="128"/>
-    </div>
-    <div *ngIf="signUp.controls['date'].errors && !signUp.controls['date'].pristine" class="error-msgr">
-      <div [ngSwitch]="obj(signUp.controls['date'].errors)[0]">
-        <div *ngSwitchCase="'required'">{{ 'register.DATE_REQUIRED' | translate  }}</div>
-        <div *ngSwitchCase="'minlength'">{{ 'register.DATE_MINLENGTH' | translate  }}</div>
-      </div>
+      <label for="dates">Date and Time*: </label>
+      <input class="form-control" formControlName="dates" name="dates" type="text" value="" maxlength="128" />
     </div>
     <!-- Date and Time End -->
   
       <!-- Location Start-->
-      <label for="country">{{ 'register.country' | translate }}</label>
+      <label for="country">Location*: </label>
         <select formControlName="country" id="country">
-          <option *ngFor="let countryName of countryList" [ngValue]="countryName">{{countryName}}</option>
+          <option *ngFor="let countryName of countryList" [ngValue]="countryName" >{{countryName}}</option>
         </select>
-        <div *ngIf="signUp.controls['country'].errors && !signUp.controls['country'].pristine" class="error-msgr">
-          <div [ngSwitch]="obj(signUp.controls['phoneNumber'].errors)[0]">
-            <div *ngSwitchCase="'required'">{{ 'register.COUNTRY_REQUIRED' | translate  }}</div>
-          </div>
-        </div>
       <!-- Location End -->
 
       <!-- Submit Button Start -->
       <div>
-        <input type="submit" name=" " value="{{ 'register.submit' | translate }}" [disabled]="signUp.valid" />
+        <input type="submit" name=" " value="Submit" [disabled]="signUp.invalid" />
       </div>
       <!-- Submit Button End -->
     </div>
